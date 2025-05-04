@@ -1,0 +1,42 @@
+# --- Сборка и бинарники ---
+/bin/
+/build/
+/*.exe
+/*.exe~
+/*.dll
+/*.so
+/*.dylib
+
+# --- Файлы окружения с секретами ---
+keys/*.asc
+*.pem
+
+# --- Временные и лог-файлы ---
+*.log
+*.out
+*.tmp
+*.swp
+*~
+
+# --- IDE и редакторы ---
+.idea/
+.vscode/
+*.iml
+
+# --- macOS & Linux ---
+.DS_Store
+.Trashes
+Thumbs.db
+
+# --- Go ---
+# сгенерированный кеш, тестовые отчёты
+coverage.out
+*.test
+!.github/workflows
+
+# если используете vendor — можете закомментировать следующую строку
+/vendor/
+
+# --- Misc ---
+node_modules/
+dist/

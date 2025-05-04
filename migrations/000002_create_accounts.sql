@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS accounts (
+    id         UUID PRIMARY KEY,
+    user_id    UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    number     VARCHAR(20) NOT NULL UNIQUE,
+    balance    NUMERIC(18,2) NOT NULL DEFAULT 0,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
